@@ -49,3 +49,14 @@ function allWagesFor(employee){
     accumulator += wagesEarnedOnDate(employee, currentValue)
     return accumulator
   }, 0);}
+  
+function findEmployeeByFirstName(employeeRecordsArr, firstName) {
+  return employeeRecordsArr.find(element => element.firstName === firstName)
+}
+
+function calculatePayroll(employeeRecordsArr) {
+  return employeeRecordsArr.reduce((accumulator, currentValue) => {
+    accumulator += allWagesFor(currentValue)
+    return accumulator
+  }, 0)
+}
