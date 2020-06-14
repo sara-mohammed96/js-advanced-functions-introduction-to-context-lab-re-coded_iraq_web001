@@ -29,7 +29,7 @@ function createTimeOutEvent(object,dateStamp){
    type: "TimeIn",
    hour: parseInt(hour, 10),date
   })
-  return object
+  return object;
 }
 function hoursWorkedOnDate(employee,date){
   let timeIn = employee.timeInEvents.find(el => el.date === date).hour
