@@ -44,6 +44,8 @@ function wagesEarnedOnDate(employee,date){
 }
 
 function allWagesFor(employee){
-  let wages = employee.timeInEvents.map(function (elem) {
-    return elem.date;
-});}
+  let arrayDates = employee.timeInEvents.map(element => element.date)
+  return arrayDates.reduce((accumulator, currentValue) => {
+    accumulator += wagesEarnedOnDate(employee, currentValue)
+    return accumulator
+  }, 0);}
