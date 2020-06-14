@@ -50,12 +50,12 @@ function allWagesFor(employee){
     return accumulator
   }, 0);}
   
-function findEmployeeByFirstName(employeeRecordsArr, firstName) {
-  return employeeRecordsArr.find(element => element.firstName === firstName)
+function findEmployeeByFirstName(srcArray, firstName) {
+  return srcArray.find(el => el.firstName === firstName)
 }
 
-function calculatePayroll(employeeRecordsArr) {
-  return employeeRecordsArr.reduce((accumulator, currentValue) => {
+function calculatePayroll(employeeRecordsArray) {
+  return employeeRecordsArray.reduce((accumulator, currentValue) => {
     accumulator += allWagesFor(currentValue)
     return accumulator
   }, 0)
